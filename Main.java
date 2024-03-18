@@ -10,150 +10,150 @@ public class Main {
 
     static Scanner sc = new Scanner(System.in);
     public static void main(String[] args){
-        Subject subject1 = new Subject("Mathematics", "MATH101", "Introduction to Mathematics", true);
-        Subject subject2 = new Subject("Physics", "PHYS101", "Introduction to Physics", true);
-        Subject subject3 = new Subject("Biology", "BIO101", "Introduction to Biology", true);
-        Subject subject4 = new Subject("Chemistry", "CHEM101", "Introduction to Chemistry", true);
-        Subject subject5 = new Subject("English", "ENG101", "Introduction to English Literature", true);
-
-        // Add subjects to the list of subjects
-        Subject.addSubject(subject1);
-        Subject.addSubject(subject2);
-        Subject.addSubject(subject3);
-        Subject.addSubject(subject4);
-        Subject.addSubject(subject5);
-
-        // Display all subjects
-        Subject.displayAllSubjects();
-        // Example usage
-        Instructor instructor1 = new Instructor("John", "Doe", "123 Street", 35);
-        Instructor instructor2 = new Instructor("Jane", "Smith", "456 Avenue", 40);
-
-        // Add instructors to the list
-        Instructor.addInstructor(instructor1);
-        Instructor.addInstructor(instructor2);
-
-        // Search for an instructor by ID
-        String searchId = instructor1.getInstructorId(); // Using the ID of the first instructor
-        Instructor foundInstructor = Instructor.findInstructorById(searchId);
-
-        if (foundInstructor != null) {
-            System.out.println("Instructor found:");
-            System.out.println("Name: " + foundInstructor.getFullName());
-            System.out.println("ID: " + foundInstructor.getInstructorId());
-            System.out.println("Age: " + foundInstructor.getAge());
-            // You can print other details if needed
-        } else {
-            System.out.println("Instructor not found with ID: " + searchId);
-        }
-        Student student1 = new Student("John", "Robert", "Smith", "123 Main St", 20);
-        Student student2 = new Student("Emily", "Grace", "Johnson", "456 Elm St", 22);
-        Student student3 = new Student("Michael", "James", "Brown", "789 Oak St", 21);
-        Student student4 = new Student("Sophia", "Elizabeth", "Davis", "321 Pine St", 23);
-        Student student5 = new Student("William", "Alexander", "Wilson", "654 Cedar St", 19);
-        Student student6 = new Student("Olivia", "Madison", "Taylor", "987 Maple St", 20);
-        Student student7 = new Student("Ethan", "David", "Anderson", "135 Birch St", 21);
-        Student student8 = new Student("Emma", "Charlotte", "Thomas", "246 Walnut St", 22);
-        Student student9 = new Student("Alexander", "Joseph", "Clark", "579 Spruce St", 20);
-        Student student10 = new Student("Ava", "Abigail", "Moore", "468 Sycamore St", 21);
-        Student student11 = new Student("Matthew", "Christopher", "White", "753 Cherry St", 23);
-        Student student12 = new Student("Isabella", "Natalie", "Harris", "864 Ash St", 19);
-        Student student13 = new Student("Daniel", "Benjamin", "Martinez", "159 Cedar St", 20);
-        Student student14 = new Student("Mia", "Grace", "Robinson", "246 Elm St", 22);
-        Student student15 = new Student("Jacob", "Andrew", "Lee", "357 Oak St", 21);
-        Student student16 = new Student("Sophie", "Madeline", "Garcia", "468 Pine St", 20);
-        Student student17 = new Student("Liam", "Henry", "Miller", "579 Maple St", 22);
-        Student student18 = new Student("Charlotte", "Victoria", "Jackson", "681 Birch St", 19);
-        Student student19 = new Student("Noah", "William", "Adams", "792 Walnut St", 20);
-        Student student20 = new Student("Amelia", "Scarlett", "Cook", "893 Spruce St", 21);
-        Student student21 = new Student("James", "Edward", "Evans", "324 Sycamore St", 23);
-        Student student22 = new Student("Ella", "Grace", "Perez", "435 Cherry St", 19);
-        Student student23 = new Student("Benjamin", "Samuel", "Gonzalez", "546 Ash St", 20);
-        Student student24 = new Student("Avery", "Samantha", "Murphy", "657 Cedar St", 22);
-        Student student25 = new Student("Lucas", "Nicholas", "Rivera", "768 Elm St", 21);
-        Student student26 = new Student("Harper", "Madison", "Collins", "879 Oak St", 20);
-        Student student27 = new Student("Logan", "Michael", "Baker", "981 Pine St", 22);
-        Student student28 = new Student("Lily", "Isabella", "Rossi", "192 Maple St", 19);
-        Student student29 = new Student("Jackson", "Gabriel", "Edwards", "283 Birch St", 20);
-
-
-
-        // Add students to the list
-        Student.addStudent(student1);
-        Student.addStudent(student2);
-        Student.addStudent(student3);
-        Student.addStudent(student4);
-        Student.addStudent(student5);
-        Student.addStudent(student6);
-        Student.addStudent(student7);
-        Student.addStudent(student8);
-        Student.addStudent(student9);
-        Student.addStudent(student10);
-        Student.addStudent(student11);
-        Student.addStudent(student12);
-        Student.addStudent(student13);
-        Student.addStudent(student14);
-        Student.addStudent(student15);
-        Student.addStudent(student16);
-        Student.addStudent(student17);
-        Student.addStudent(student18);
-        Student.addStudent(student19);
-        Student.addStudent(student20);
-        Student.addStudent(student21);
-        Student.addStudent(student22);
-        Student.addStudent(student23);
-        Student.addStudent(student24);
-        Student.addStudent(student25);
-        Student.addStudent(student26);
-        Student.addStudent(student27);
-        Student.addStudent(student28);
-        Student.addStudent(student29);
-
-
-        Subject subjectA = subject1;
-        subjectA.enrollStudent(student1);
-        subjectA.enrollStudent(student2);
-        subjectA.enrollStudent(student3);
-        subjectA.enrollStudent(student4);
-        subjectA.enrollStudent(student5);
-        subjectA.enrollStudent(student6);
-        subjectA.enrollStudent(student7);
-        subjectA.enrollStudent(student8);
-        subjectA.enrollStudent(student9);
-        subjectA.enrollStudent(student10);
-        subjectA.enrollStudent(student11);
-        subjectA.enrollStudent(student12);
-        subjectA.enrollStudent(student13);
-        subjectA.enrollStudent(student14);
-        subjectA.enrollStudent(student15);
-        subjectA.enrollStudent(student16);
-        subjectA.enrollStudent(student17);
-        subjectA.enrollStudent(student18);
-        subjectA.enrollStudent(student19);
-        subjectA.enrollStudent(student20);
-        subjectA.enrollStudent(student21);
-        subjectA.enrollStudent(student22);
-        subjectA.enrollStudent(student23);
-        subjectA.enrollStudent(student24);
-        subjectA.enrollStudent(student25);
-        subjectA.enrollStudent(student26);
-        subjectA.enrollStudent(student27);
-        subjectA.enrollStudent(student28);
-        subjectA.enrollStudent(student29);
-
-        // Search for an student by ID
-        String searchsId = student1.getStudentId(); // Using the ID of the first student
-        Student foundStudent = Student.findStudentById(searchsId);
-
-        if (foundStudent != null) {
-            System.out.println("Student found:");
-            System.out.println("Name: " + foundStudent.getFullName());
-            System.out.println("ID: " + foundStudent.getStudentId());
-            System.out.println("Age: " + foundStudent.getAge());
-            // You can print other details if needed
-        } else {
-            System.out.println("Student not found with ID: " + searchsId);
-        }
+//        Subject subject1 = new Subject("Mathematics", "MATH101", "Introduction to Mathematics", true);
+//        Subject subject2 = new Subject("Physics", "PHYS101", "Introduction to Physics", true);
+//        Subject subject3 = new Subject("Biology", "BIO101", "Introduction to Biology", true);
+//        Subject subject4 = new Subject("Chemistry", "CHEM101", "Introduction to Chemistry", true);
+//        Subject subject5 = new Subject("English", "ENG101", "Introduction to English Literature", true);
+//
+//        // Add subjects to the list of subjects
+//        Subject.addSubject(subject1);
+//        Subject.addSubject(subject2);
+//        Subject.addSubject(subject3);
+//        Subject.addSubject(subject4);
+//        Subject.addSubject(subject5);
+//
+//        // Display all subjects
+//        Subject.displayAllSubjects();
+//        // Example usage
+//        Instructor instructor1 = new Instructor("John", "Doe", "123 Street", 35);
+//        Instructor instructor2 = new Instructor("Jane", "Smith", "456 Avenue", 40);
+//
+//        // Add instructors to the list
+//        Instructor.addInstructor(instructor1);
+//        Instructor.addInstructor(instructor2);
+//
+//        // Search for an instructor by ID
+//        String searchId = instructor1.getInstructorId(); // Using the ID of the first instructor
+//        Instructor foundInstructor = Instructor.findInstructorById(searchId);
+//
+//        if (foundInstructor != null) {
+//            System.out.println("Instructor found:");
+//            System.out.println("Name: " + foundInstructor.getFullName());
+//            System.out.println("ID: " + foundInstructor.getInstructorId());
+//            System.out.println("Age: " + foundInstructor.getAge());
+//            // You can print other details if needed
+//        } else {
+//            System.out.println("Instructor not found with ID: " + searchId);
+//        }
+//        Student student1 = new Student("John", "Robert", "Smith", "123 Main St", 20);
+//        Student student2 = new Student("Emily", "Grace", "Johnson", "456 Elm St", 22);
+//        Student student3 = new Student("Michael", "James", "Brown", "789 Oak St", 21);
+//        Student student4 = new Student("Sophia", "Elizabeth", "Davis", "321 Pine St", 23);
+//        Student student5 = new Student("William", "Alexander", "Wilson", "654 Cedar St", 19);
+//        Student student6 = new Student("Olivia", "Madison", "Taylor", "987 Maple St", 20);
+//        Student student7 = new Student("Ethan", "David", "Anderson", "135 Birch St", 21);
+//        Student student8 = new Student("Emma", "Charlotte", "Thomas", "246 Walnut St", 22);
+//        Student student9 = new Student("Alexander", "Joseph", "Clark", "579 Spruce St", 20);
+//        Student student10 = new Student("Ava", "Abigail", "Moore", "468 Sycamore St", 21);
+//        Student student11 = new Student("Matthew", "Christopher", "White", "753 Cherry St", 23);
+//        Student student12 = new Student("Isabella", "Natalie", "Harris", "864 Ash St", 19);
+//        Student student13 = new Student("Daniel", "Benjamin", "Martinez", "159 Cedar St", 20);
+//        Student student14 = new Student("Mia", "Grace", "Robinson", "246 Elm St", 22);
+//        Student student15 = new Student("Jacob", "Andrew", "Lee", "357 Oak St", 21);
+//        Student student16 = new Student("Sophie", "Madeline", "Garcia", "468 Pine St", 20);
+//        Student student17 = new Student("Liam", "Henry", "Miller", "579 Maple St", 22);
+//        Student student18 = new Student("Charlotte", "Victoria", "Jackson", "681 Birch St", 19);
+//        Student student19 = new Student("Noah", "William", "Adams", "792 Walnut St", 20);
+//        Student student20 = new Student("Amelia", "Scarlett", "Cook", "893 Spruce St", 21);
+//        Student student21 = new Student("James", "Edward", "Evans", "324 Sycamore St", 23);
+//        Student student22 = new Student("Ella", "Grace", "Perez", "435 Cherry St", 19);
+//        Student student23 = new Student("Benjamin", "Samuel", "Gonzalez", "546 Ash St", 20);
+//        Student student24 = new Student("Avery", "Samantha", "Murphy", "657 Cedar St", 22);
+//        Student student25 = new Student("Lucas", "Nicholas", "Rivera", "768 Elm St", 21);
+//        Student student26 = new Student("Harper", "Madison", "Collins", "879 Oak St", 20);
+//        Student student27 = new Student("Logan", "Michael", "Baker", "981 Pine St", 22);
+//        Student student28 = new Student("Lily", "Isabella", "Rossi", "192 Maple St", 19);
+//        Student student29 = new Student("Jackson", "Gabriel", "Edwards", "283 Birch St", 20);
+//
+//
+//
+//        // Add students to the list
+//        Student.addStudent(student1);
+//        Student.addStudent(student2);
+//        Student.addStudent(student3);
+//        Student.addStudent(student4);
+//        Student.addStudent(student5);
+//        Student.addStudent(student6);
+//        Student.addStudent(student7);
+//        Student.addStudent(student8);
+//        Student.addStudent(student9);
+//        Student.addStudent(student10);
+//        Student.addStudent(student11);
+//        Student.addStudent(student12);
+//        Student.addStudent(student13);
+//        Student.addStudent(student14);
+//        Student.addStudent(student15);
+//        Student.addStudent(student16);
+//        Student.addStudent(student17);
+//        Student.addStudent(student18);
+//        Student.addStudent(student19);
+//        Student.addStudent(student20);
+//        Student.addStudent(student21);
+//        Student.addStudent(student22);
+//        Student.addStudent(student23);
+//        Student.addStudent(student24);
+//        Student.addStudent(student25);
+//        Student.addStudent(student26);
+//        Student.addStudent(student27);
+//        Student.addStudent(student28);
+//        Student.addStudent(student29);
+//
+//
+//        Subject subjectA = subject1;
+//        subjectA.enrollStudent(student1);
+//        subjectA.enrollStudent(student2);
+//        subjectA.enrollStudent(student3);
+//        subjectA.enrollStudent(student4);
+//        subjectA.enrollStudent(student5);
+//        subjectA.enrollStudent(student6);
+//        subjectA.enrollStudent(student7);
+//        subjectA.enrollStudent(student8);
+//        subjectA.enrollStudent(student9);
+//        subjectA.enrollStudent(student10);
+//        subjectA.enrollStudent(student11);
+//        subjectA.enrollStudent(student12);
+//        subjectA.enrollStudent(student13);
+//        subjectA.enrollStudent(student14);
+//        subjectA.enrollStudent(student15);
+//        subjectA.enrollStudent(student16);
+//        subjectA.enrollStudent(student17);
+//        subjectA.enrollStudent(student18);
+//        subjectA.enrollStudent(student19);
+//        subjectA.enrollStudent(student20);
+//        subjectA.enrollStudent(student21);
+//        subjectA.enrollStudent(student22);
+//        subjectA.enrollStudent(student23);
+//        subjectA.enrollStudent(student24);
+//        subjectA.enrollStudent(student25);
+//        subjectA.enrollStudent(student26);
+//        subjectA.enrollStudent(student27);
+//        subjectA.enrollStudent(student28);
+//        subjectA.enrollStudent(student29);
+//
+//        // Search for an student by ID
+//        String searchsId = student1.getStudentId(); // Using the ID of the first student
+//        Student foundStudent = Student.findStudentById(searchsId);
+//
+//        if (foundStudent != null) {
+//            System.out.println("Student found:");
+//            System.out.println("Name: " + foundStudent.getFullName());
+//            System.out.println("ID: " + foundStudent.getStudentId());
+//            System.out.println("Age: " + foundStudent.getAge());
+//            // You can print other details if needed
+//        } else {
+//            System.out.println("Student not found with ID: " + searchsId);
+//        }
 
         System.out.println("\n" +
                 " __          __    _                                _            _____  __  __  _            _    _         _                         _  _          _     \n" +
