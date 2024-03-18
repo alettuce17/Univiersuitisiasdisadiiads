@@ -1,23 +1,25 @@
-public class Person {
+public abstract class Person {
     private String firstName;
     private String middleName;
     private String lastName;
     private String address;
     private int age;
 
+
+
     public Person(String firstName, String lastName, String address, int age) {
-        this.firstName = firstName;
-        this.lastName = lastName;
-        this.address = address;
+        this.firstName = firstName.substring(0, 1).toUpperCase() + lastName.substring(1);
+        this.lastName = lastName.substring(0, 1).toUpperCase() + lastName.substring(1);
+        this.address = address.substring(0, 1).toUpperCase() + lastName.substring(1);
         this.age = age;
     }
 
     // Constructor with middle name
     public Person(String firstName, String middleName, String lastName, String address, int age) {
-        this.firstName = firstName;
-        this.middleName = middleName;
-        this.lastName = lastName;
-        this.address = address;
+        this.firstName = firstName.substring(0, 1).toUpperCase() + lastName.substring(1);
+        this.middleName = middleName.substring(0, 1).toUpperCase() + lastName.substring(1);
+        this.lastName = lastName.substring(0, 1).toUpperCase() + lastName.substring(1);
+        this.address = address.substring(0, 1).toUpperCase() + lastName.substring(1);
         this.age = age;
     }
 
@@ -29,11 +31,28 @@ public class Person {
     public void displayInfo() {
         System.out.println("Last Name: " + lastName);
         System.out.println("First Name: " + firstName);
-        System.out.println("Middle Name: " + middleName);
+        System.out.println("Middle Name: " + (middleName==null ? "N/A" : middleName));
         System.out.println("Address: " + address);
         System.out.println("Age: " + age);
     }
+    public static String truncateString(String str, int maxLength) {
+        if (str.length() > maxLength) {
+            return str.substring(0, maxLength - 3) + "...";
+        }
+        return str;
+    }
 
+    public static String padString(String str, int length) {
+        if (str.length() >= length) {
+            return str;
+        } else {
+            StringBuilder paddedStr = new StringBuilder(str);
+            while (paddedStr.length() < length) {
+                paddedStr.append(" ");
+            }
+            return paddedStr.toString();
+        }
+    }
     public String getFullName() {
         if (middleName != null && !middleName.isEmpty()) {
             return firstName + " " + middleName + " " + lastName;
@@ -47,10 +66,11 @@ public class Person {
     }
 
     public void setFirstName(String firstName) {
-        if(firstName==null){
-            firstName=this.firstName;
+        if (firstName == null ) {
+            this.firstName = this.firstName;
+        } else {
+            this.firstName = firstName.substring(0, 1).toUpperCase() + lastName.substring(1);
         }
-        this.firstName = firstName;
     }
 
     public String getMiddleName() {
@@ -58,21 +78,29 @@ public class Person {
     }
 
     public void setMiddleName(String middleName) {
-        if(middleName==null){
-            middleName=this.middleName;
+        if (middleName == null) {
+            this.middleName = this.middleName;
+
+        } else {
+            this.middleName = middleName.substring(0, 1).toUpperCase() + lastName.substring(1);
         }
-        this.middleName = middleName;
     }
+
 
     public String getLastName() {
         return lastName;
     }
 
     public void setLastName(String lastName) {
-        if(lastName==null){
-            lastName=this.lastName;
+        if (lastName == null) {
+            this.lastName = this.lastName;
+        } else {
+            this.lastName = lastName.substring(0, 1).toUpperCase() + lastName.substring(1);
         }
-        this.lastName = lastName;
+    }
+
+    public static String getRole() {
+        return null;
     }
 
     public String getAddress() {
@@ -80,7 +108,11 @@ public class Person {
     }
 
     public void setAddress(String address) {
-        this.address = address;
+        if (address == null ){
+            this.lastName = this.lastName.substring(0, 1).toUpperCase() + lastName.substring(1);
+        }else {
+            this.address = address.substring(0, 1).toUpperCase() + lastName.substring(1);
+        }
     }
 
     public int getAge() {
@@ -88,6 +120,11 @@ public class Person {
     }
 
     public void setAge(int age) {
-        this.age = age;
+        if (age > 0) {
+            this.age = age;
+        }else {
+            this.age = this.age;
+        }
     }
+
 }
