@@ -1,6 +1,7 @@
 import java.time.Year;
 import java.util.ArrayList;
 import java.util.Random;
+import java.util.Scanner;
 
 public class Student extends Person  {
     private static ArrayList<String> studentIds = new ArrayList<>();
@@ -82,7 +83,7 @@ public class Student extends Person  {
             }
         }
         if (!found) {
-            System.out.println("No instructors found with the provided substring("+substring+").");
+            System.out.println("No students found with the provided substring("+substring+").");
         }
     }
 
