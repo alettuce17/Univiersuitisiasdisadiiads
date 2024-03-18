@@ -81,10 +81,10 @@ public class Instructor extends Person {
                 subjectName = padString(subjectName, 20);
                 subjectId = padString(subjectId, 15);
 
-                System.out.println("| " + subjectName + " | " + subjectId + " |");
+                System.out.println("| " + subjectName + " | " + subjectId + "|");
             }
         }
-
+        System.out.println("+--------------------------------------+");
         String totalAssignedSubjectsLine = "| Total Assigned Subjects: " + getSizeOfAssignedSubjectsForInstructor();
         totalAssignedSubjectsLine = padString(totalAssignedSubjectsLine, 38);
         System.out.println(totalAssignedSubjectsLine + " |");

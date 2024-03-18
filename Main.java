@@ -5,64 +5,64 @@ public class Main {
 
     static Scanner sc = new Scanner(System.in);
     public static void main(String[] args){
-//        Subject subject1 = new Subject("Mathematics", "MATH101", "Introduction to Mathematics", true);
-//        Subject subject2 = new Subject("Physics", "PHYS101", "Introduction to Physics", true);
-//        Subject subject3 = new Subject("Biology", "BIO101", "Introduction to Biology", true);
-//        Subject subject4 = new Subject("Chemistry", "CHEM101", "Introduction to Chemistry", true);
-//        Subject subject5 = new Subject("English", "ENG101", "Introduction to English Literature", true);
-//
-//        // Add subjects to the list of subjects
-//        Subject.addSubject(subject1);
-//        Subject.addSubject(subject2);
-//        Subject.addSubject(subject3);
-//        Subject.addSubject(subject4);
-//        Subject.addSubject(subject5);
-//
-//        // Display all subjects
-//        Subject.displayAllSubjects();
-//        // Example usage
-//        Instructor instructor1 = new Instructor("John", "Doe", "123 Street", 35);
-//        Instructor instructor2 = new Instructor("Jane", "Smith", "456 Avenue", 40);
-//
-//        // Add instructors to the list
-//        Instructor.addInstructor(instructor1);
-//        Instructor.addInstructor(instructor2);
-//
-//        // Search for an instructor by ID
-//        String searchId = instructor1.getInstructorId(); // Using the ID of the first instructor
-//        Instructor foundInstructor = Instructor.findInstructorById(searchId);
-//
-//        if (foundInstructor != null) {
-//            System.out.println("Instructor found:");
-//            System.out.println("Name: " + foundInstructor.getFullName());
-//            System.out.println("ID: " + foundInstructor.getInstructorId());
-//            System.out.println("Age: " + foundInstructor.getAge());
-//            // You can print other details if needed
-//        } else {
-//            System.out.println("Instructor not found with ID: " + searchId);
-//        }
-//        Student student1 = new Student("John", "Doe", "123 Street", 35);
-//        Student student2 = new Student("Jane","asd", "Smith", "456 Avenue", 40);
-//
-//
-//        // Add students to the list
-//        Student.addStudent(student1);
-//
-//        Student.addStudent(student2);
-//
-//        // Search for an student by ID
-//        String searchsId = student1.getStudentId(); // Using the ID of the first student
-//        Student foundStudent = Student.findStudentById(searchsId);
-//
-//        if (foundStudent != null) {
-//            System.out.println("Student found:");
-//            System.out.println("Name: " + foundStudent.getFullName());
-//            System.out.println("ID: " + foundStudent.getStudentId());
-//            System.out.println("Age: " + foundStudent.getAge());
-//            // You can print other details if needed
-//        } else {
-//            System.out.println("Student not found with ID: " + searchsId);
-//        }
+        Subject subject1 = new Subject("Mathematics", "MATH101", "Introduction to Mathematics", true);
+        Subject subject2 = new Subject("Physics", "PHYS101", "Introduction to Physics", true);
+        Subject subject3 = new Subject("Biology", "BIO101", "Introduction to Biology", true);
+        Subject subject4 = new Subject("Chemistry", "CHEM101", "Introduction to Chemistry", true);
+        Subject subject5 = new Subject("English", "ENG101", "Introduction to English Literature", true);
+
+        // Add subjects to the list of subjects
+        Subject.addSubject(subject1);
+        Subject.addSubject(subject2);
+        Subject.addSubject(subject3);
+        Subject.addSubject(subject4);
+        Subject.addSubject(subject5);
+
+        // Display all subjects
+        Subject.displayAllSubjects();
+        // Example usage
+        Instructor instructor1 = new Instructor("John", "Doe", "123 Street", 35);
+        Instructor instructor2 = new Instructor("Jane", "Smith", "456 Avenue", 40);
+
+        // Add instructors to the list
+        Instructor.addInstructor(instructor1);
+        Instructor.addInstructor(instructor2);
+
+        // Search for an instructor by ID
+        String searchId = instructor1.getInstructorId(); // Using the ID of the first instructor
+        Instructor foundInstructor = Instructor.findInstructorById(searchId);
+
+        if (foundInstructor != null) {
+            System.out.println("Instructor found:");
+            System.out.println("Name: " + foundInstructor.getFullName());
+            System.out.println("ID: " + foundInstructor.getInstructorId());
+            System.out.println("Age: " + foundInstructor.getAge());
+            // You can print other details if needed
+        } else {
+            System.out.println("Instructor not found with ID: " + searchId);
+        }
+        Student student1 = new Student("John", "Doe", "123 Street", 35);
+        Student student2 = new Student("Jane","asd", "Smith", "456 Avenue", 40);
+
+
+        // Add students to the list
+        Student.addStudent(student1);
+
+        Student.addStudent(student2);
+
+        // Search for an student by ID
+        String searchsId = student1.getStudentId(); // Using the ID of the first student
+        Student foundStudent = Student.findStudentById(searchsId);
+
+        if (foundStudent != null) {
+            System.out.println("Student found:");
+            System.out.println("Name: " + foundStudent.getFullName());
+            System.out.println("ID: " + foundStudent.getStudentId());
+            System.out.println("Age: " + foundStudent.getAge());
+            // You can print other details if needed
+        } else {
+            System.out.println("Student not found with ID: " + searchsId);
+        }
 
         System.out.println("\n" +
                 " __          __    _                                _            _____  __  __  _            _    _         _                         _  _          _     \n" +
@@ -110,7 +110,7 @@ public class Main {
                         "│"+padStringMiddle(" |",122)+"│\n" +
                         "│"+padStringMiddle("[8] Unenroll a Student",61)+"│" + padStringMiddle("[9] Unassign Instructor to a subject",60)+"│\n"+
                         "│"+padStringMiddle(" |",122)+"│\n" +
-                        "│--------------------------------------------------------------------------------------------------------------------------│\n" +
+                        "+==========================================================================================================================+\n" +
                         "\n"+
                         "+==========================================================================================================================+\n" +
                         "│"+padStringMiddle("View All Records",122)+"│\n" +
@@ -142,7 +142,6 @@ public class Main {
                     switch (options("Add")){
                         case 1:
                             sc.nextLine();
-                            System.out.println("add student");
                             addPerson(Student.getRole());
                             System.out.println(Student.getStaticRole()); // Output: Student
 
@@ -161,20 +160,20 @@ public class Main {
                     // Edit
                     switch (options("Edit")){
                         case 1:
-                            sc.nextLine();
                             // Validate first if there are currently available students
                             if(!Student.students.isEmpty()){
                                 editPerson(Student.getRole());
                             }else {
-
+                                sc.nextLine();
                                 noInput(Student.getRole());
                             }
                             break;
                         case 2:
-                            sc.nextLine();
+
                             if(!Instructor.instructors.isEmpty()) {
                                 editPerson(Instructor.getRole());
                             }else {
+                                sc.nextLine();
                                 noInput(Instructor.getRole());
                             }
                             break;
@@ -194,7 +193,6 @@ public class Main {
                         case 1:
                             sc.nextLine();
                             if(!Student.students.isEmpty()){
-                                System.out.println("delete student");
 
                                 boolean validStudentId = false;
 
@@ -319,8 +317,7 @@ public class Main {
                             }
                             break;
                         case 3:
-                            System.out.println("delete subject");
-                            sc.nextLine();
+
                             if(!Subject.subjects.isEmpty()) {
 
                                 boolean validSubjectId = false;
@@ -342,6 +339,7 @@ public class Main {
                                     }
                                 }
                             }else {
+                                sc.nextLine();
                                 noInput("Subject");
                             }
                             break;
@@ -375,6 +373,7 @@ public class Main {
                                     }while (true);
                                 }while (!confirmation.equalsIgnoreCase("no"));
                             }else {
+                                sc.nextLine();
                                 noInput(Student.getRole());
                             }
                             break;
@@ -505,7 +504,7 @@ public class Main {
                                                         assignSub.equalsIgnoreCase("no");
                                                     } else {
                                                         while (true) {
-                                                            System.out.println("Do you still want to assign a instructor(yes/no)?");
+                                                            System.out.println("Do you still want to assign a instructor for a Subject?(yes/no)?");
                                                             assignSub = sc.nextLine();
                                                             if (assignSub.equalsIgnoreCase("yes")) {
                                                                 break;
@@ -571,6 +570,7 @@ public class Main {
                                 }while (!confirmation.equalsIgnoreCase("no"));
 
                             }else{
+                                sc.nextLine();
                                 noInput("Subject");
                             }
 
@@ -801,8 +801,10 @@ public class Main {
                                         System.out.println("Please enter a valid answer");
                                     }
                                 }
-                            }else if(!subject.hasInstructorsAssigned()){
+                            }else if(subject !=  null && !subject.hasInstructorsAssigned()){
                                 System.out.println("No instructor assigned to this subject");
+                            }else {
+                                System.out.println("Subject id not found");
                             }
                             while (true) {
                                 System.out.println("Do you still want to unassign an Instructor (yes/no)?");
@@ -929,18 +931,36 @@ public class Main {
             while (true) {
                 System.out.println("Enter " + role + "'s age:");
                 String ageInput = sc.nextLine();
-
+                String confirm = "";
                 if (isNumeric(ageInput)) {
                     age = Integer.parseInt(ageInput);
                     if ((role.equalsIgnoreCase(Student.getRole()) && age < 17) || (role.equalsIgnoreCase(Instructor.getRole()) && age < 24)) {
                         System.out.println("Invalid age. " + role + " must be at least " + (role.equalsIgnoreCase(Student.getRole()) ? "17" : "24") + " years old or older.");
-                    } else {
+                    } else if(age>60){
+                        while (true) {
+                            System.out.println("Are you sure you are above 60 years old? Please confirm (yes/no):");
+                            confirm = sc.nextLine();
+                            if (confirm.equalsIgnoreCase("yes")){
+                                System.out.println("Thank you for confirming your age.");
+                                break;
+                            }else if(confirm.equalsIgnoreCase("no")){
+                                System.out.println("Please provide your correct age:");
+                                break;
+                            }else {
+                                System.out.println("Please enter a valid answer. ");
+                            }
+                        }
+                        if (confirm.equalsIgnoreCase("yes")){
+                            break;
+                        }
+                    }else {
                         break;
                     }
                 } else {
                     System.out.println("Invalid age input. Please enter a valid number.");
 
                 }
+
             }
 
             // Prompt for confirmation
@@ -1129,11 +1149,25 @@ public class Main {
             // Prompt the user to input subject details
             System.out.println("Enter subject details:");
             System.out.print("Name: ");
-            String name = sc.nextLine();
+            String name = sc.nextLine().trim(); // trim to remove leading/trailing whitespace
+            while (name.isEmpty()) {
+                System.out.println("Name cannot be empty. Please enter again:");
+                name = sc.nextLine().trim();
+            }
+
             System.out.print("Code: ");
-            String code = sc.nextLine();
+            String code = sc.nextLine().trim(); // trim to remove leading/trailing whitespace
+            while (code.isEmpty()) {
+                System.out.println("Code cannot be empty. Please enter again:");
+                code = sc.nextLine().trim();
+            }
+
             System.out.print("Description: ");
-            String description = sc.nextLine();
+            String description = sc.nextLine().trim(); // trim to remove leading/trailing whitespace
+            while (description.isEmpty()) {
+                System.out.println("Description cannot be empty. Please enter again:");
+                description = sc.nextLine().trim();
+            }
             Subject subject = new Subject(name.substring(0, 1).toUpperCase() + name.substring(1), code.toUpperCase(), description.substring(0, 1).toUpperCase() + name.substring(1), false);
 
             while (true) {
@@ -1287,8 +1321,8 @@ public class Main {
                         }
                         if (isNumeric(ageInput)) {
                             age = Integer.parseInt(ageInput);
-                            if (age < 24) {
-                                System.out.println("Invalid age. student must be at least 24 years old or older.");
+                            if (age < 17) {
+                                System.out.println("Invalid age. Student must be at least 17 years old or older.");
                             } else {
                                 break;
                             }
@@ -1302,10 +1336,10 @@ public class Main {
                     promptForConfirmation(lastName,firstName,middleName,address,age,role);
                     String confirm;
                     while(true) {
-                        System.out.println("Do you want to add this " + role + "? (yes/no)");
+                        System.out.println("Do you want to save the following information(yes/no)?");
                         confirm = sc.nextLine().toLowerCase();
                         if(confirm.equalsIgnoreCase("no")){
-                            System.out.println(role+" will not be added.");
+                            System.out.println(role+"'s information will not be modified.");
                             break;
                         }else if(confirm.equalsIgnoreCase("yes")){
                             student.setFirstName(firstName);
@@ -1314,16 +1348,13 @@ public class Main {
                             student.setAddress(address);
                             student.setAge(age);
                             student.displayInfo();
-                            System.out.println("Mr." + student.getLastName() + "added as a student");
+                            System.out.println("Student details updated successfully.");
                             break;
                         }
                         else {
                             System.out.println("Please enter a valid answer");
                         }
                     }
-
-
-                    System.out.println("student details updated successfully.");
                 } else {
                     while (true) {
                         System.out.println("Do you still want to search a Student Id (yes/no)?");
@@ -1463,7 +1494,7 @@ public class Main {
     public static void enrollStudentToSubject( Student newStudent) {
         String confirmation = "";
         do {
-            System.out.println("Enter the subject ID You want to Enroll:");
+            System.out.println("Enter the Subject ID You want to Enroll:");
             String subjectId = sc.nextLine();
             Subject subject = Subject.findSubjectById(subjectId);
             if (subject != null) {
@@ -1494,7 +1525,7 @@ public class Main {
         boolean asssignMore = true;
 
         do {
-            System.out.println("Enter the subject ID You want to be assigned: ");
+            System.out.println("Enter the Subject ID You want to be assigned: ");
             String subjectId = sc.nextLine();
             Subject subject = Subject.findSubjectById(subjectId);
             if (subject != null && !subject.isInstructorAssigned(newInstructor)&&!subject.hasInstructorsAssigned()) {
@@ -1585,7 +1616,7 @@ public class Main {
         System.out.println("Confirm adding " + role + " with the following details:");
         System.out.println("Last Name: " + lastName);
         System.out.println("First Name: " + firstName);
-        System.out.println("Middle Name: " + middleName);
+        System.out.println("Middle Name: " + (middleName==null ? "N/A" : middleName));
         System.out.println("Address: " + address);
         System.out.println("Age: " + age);
     }

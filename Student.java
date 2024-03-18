@@ -12,10 +12,6 @@ public class Student extends Person  {
         this.studentId = generateStudentId();
     }
 
-    public Student(String firstName, String lastName) {
-        super(firstName, lastName);
-        this.studentId = generateStudentId();
-    }
 
     public Student(String firstName, String middleName, String lastName, String address, int age) {
         super(firstName, middleName, lastName, address, age);
@@ -123,14 +119,14 @@ public class Student extends Person  {
             subjectId = padString(subjectId, 12);
             enrolledStatus = padString(enrolledStatus, 15);
 
-            System.out.println("| " + subjectId + " | " + subjectName + " | " + enrolledStatus + "      |");
+            System.out.println("| " + subjectId + " | " + subjectName + " | " + enrolledStatus + "       |");
         }
 
         // Print total enrolled subjects line with appropriate padding and truncation
+        System.out.println("+-------------------------------------------------------------+");
         String totalEnrolledSubjectsLine = "| Total Enrolled Subjects: " + getTotalEnrolledSubjects();
         totalEnrolledSubjectsLine = padString(totalEnrolledSubjectsLine, 61);
         System.out.println(totalEnrolledSubjectsLine + " |");
-
         System.out.println("+-------------------------------------------------------------+");
         System.out.println();
     }
